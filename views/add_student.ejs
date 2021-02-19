@@ -1,0 +1,90 @@
+<!-- include header -->
+<%- include('include/_header') %>
+<!-- /include header -->
+
+<!-- include tab -->
+<%- include('include/_tab') %> 
+<!-- /include tab -->
+
+<!-- Main Site -->
+  <main id="site-main">
+    <div class="container">
+        <div class="form-title text-center">
+            <h2 class="text-dark">New Student</h2>
+        </div>
+
+        <!-- form handling -->
+
+        <form action="/api/students" method="POST" id="add_student">
+            <div class="new_user">
+                <div class="form-group">
+                    <label for="name" class="text">Name</label>
+                    <input type="text" name="name" value="" placeholder="Ammar Lakho">
+                </div>
+                <div class="form-group">
+                    <label for="Email" class="text">Email</label>
+                    <input type="text" name="email" value="" placeholder="example@gmail.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="Batch" class="text">Batch</label>
+                    <select name="batch" id="batch">
+                        <option value="2018"> 2018</option>
+                        <option value="2019"> 2019</option>
+                        <option value="2020"> 2020</option>
+                        <option value="2021"> 2021</option>
+                        <option value="2022"> 2022</option>
+                        <option value="2023"> 2023</option>
+                        <option value="2024"> 2024</option>
+                        <option value="2025"> 2025</option>
+                        <option value="2026"> 2026</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="Program" class="text">Program</label>
+                    <div class = radio>                       
+                        <input type="radio" id="bba" name="program" value="BBA">
+                        <label for= "bba" id="bba"> BBA</label>
+                        <input type="radio" id="bscs" name="program" value="BSCS">
+                        <label for="bscs" id="bscs"> BSCS</label>
+                        <input type="radio" id="bsss" name="program" value="BSSS">
+                        <label for="bsss" id="bsss"> bsss</label>
+                        <input type="radio" id="bseco" name="program" value="BSECO">
+                        <label for="bseco" id="bseco"> bseco</label>
+                        <input type="radio" id="bsem" name="program" value="BSEM">
+                        <label for="bsem" id="bsem" > bsem</label>
+                        <input type="radio" id="bsacf" name="program" value="ACF">
+                        <label for = "bsacf" id="bsacf"> bsacf</label>
+                    </div>
+                </div>
+                
+                <div class="save3">
+                    <button type="submit" class="btn text-dark update">Save</button>
+                </div>
+
+            </div>
+        </form>
+
+    </div>
+</main>
+<!-- /Main Site -->
+
+<!-- include footer -->
+<%- include('include/_footer') %>
+<!-- /include footer -->
+
+<script>
+    var btn1 = document.getElementById('studentsBtn');
+    var btn2 = document.getElementById('teachersBtn');
+    var btn3 = document.getElementById('coursesBtn');
+
+    btn1.style.color = "#06d6a0"
+    btn2.style.color = "#2b2d42"
+    btn3.style.color = "#2b2d42"
+    btn1.style.borderBottomStyle = "solid"
+    btn2.style.borderBottomStyle = "none"
+    btn3.style.borderBottomStyle = "none"
+    btn1.style.borderBottomWidth = "3px"
+
+</script>

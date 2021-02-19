@@ -1,0 +1,42 @@
+<!-- include header -->
+<%- include('include/_header') %> 
+<!-- /include header -->
+
+<!-- include tab -->
+<%- include('include/_tab') %> 
+<!-- /include header -->
+
+<!-- Main Site -->
+<main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+        </div>
+
+        <!-- Form Handling -->
+        <form action="/" method="POST">
+            <%- include('include/_courseTable') %> 
+        </form>
+    </div>
+</main>
+<!-- /Main Site -->
+
+
+
+<!-- include footer -->
+<%- include('include/_footer') %> 
+<!-- /include footer -->
+
+<script>
+    var btn1 = document.getElementById('studentsBtn');
+    var btn2 = document.getElementById('teachersBtn');
+    var btn3 = document.getElementById('coursesBtn');
+
+    btn3.style.color = "#06d6a0"
+    btn2.style.color = "#2b2d42"
+    btn1.style.color = "#2b2d42"
+    btn3.style.borderBottomStyle = "solid"
+    btn2.style.borderBottomStyle = "none"
+    btn1.style.borderBottomStyle = "none"
+    btn3.style.borderBottomWidth = "3px"
+    
+</script>

@@ -1,0 +1,79 @@
+<!-- include header -->
+<%- include('include/_header') %>
+<!-- /include header -->
+
+<!-- include tab -->
+<%- include('include/_tab') %> 
+<!-- /include header -->
+
+  <!-- Main Site -->
+  <main id="site-main">
+    <div class="container">
+        
+        <div class="form-title text-center">
+            <h2 class="text-dark">New Teacher</h2>
+        </div>
+
+        <!-- add user form form handling -->
+        <form action="/api/teachers" method="POST" id="add_teacher">
+            <div class="new_user">
+                <div class="form-group">
+                    <label for="name" class="text">Name</label>
+                    <input type="text" name="name" value="" placeholder="Ammar Lakho">
+                </div>
+                <div class="form-group">
+                    <label for="Email" class="text">Email</label>
+                    <input type="text" name="email" value="" placeholder="example@gmail.com">
+                </div>
+                <div class="form-group">
+                    <label for="Department" class="text">Department</label>
+                    <select name="department" id="department">
+                        <option value="Computer Science"> Computer Science</option>
+                        <option value="Accounting"> Accounting</option>
+                        <option value="Finance"> Finance</option>
+                        <option value="Economics"> Economics</option>
+                        <option value="Mathematics "> Mathematics </option>
+                        <option value="Social Science"> Social Science</option>
+                        <option value="Marketing "> Marketing </option>
+                        <option value="Business"> Business</option>
+                    </select>
+                </div>
+                </div>
+                <div class="designation">
+                    <label for="Designation" class="text" >Designation</label>
+                    <input type="text" name="designation" value="" placeholder="Professor">
+                </div>
+                <div class="salary">
+                    <label for="Salary" class="text">Salary</label>
+                    <input type="number" name="salary" value="" placeholder="500">
+                </div>
+
+                <div class="save">
+                    <button type="submit" class="btn text-dark update">Save</button>
+                </div>
+
+            </div>
+        </form>
+       
+    </div>
+</main>
+<!-- /Main Site -->
+
+<!-- include footer -->
+<%- include('include/_footer') %>
+<!-- /include footer -->
+
+<script>
+    var btn1 = document.getElementById('studentsBtn');
+    var btn2 = document.getElementById('teachersBtn');
+    var btn3 = document.getElementById('coursesBtn');
+
+    btn2.style.color = "#06d6a0"
+    btn1.style.color = "#2b2d42"
+    btn3.style.color = "#2b2d42"
+    btn2.style.borderBottomStyle = "solid"
+    btn1.style.borderBottomStyle = "none"
+    btn3.style.borderBottomStyle = "none"
+    btn2.style.borderBottomWidth = "3px"
+    
+</script>

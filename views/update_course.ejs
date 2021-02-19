@@ -1,0 +1,72 @@
+<!-- include header -->
+<%- include('include/_header') %>
+<!-- /include header -->
+
+<!-- include tab -->
+<%- include('include/_tab') %> 
+<!-- /include header -->
+
+
+  <!-- Main Site -->
+  <main id="site-main">
+    <div class="container">
+        <div class="form-title text-center">
+            <h2 class="text-dark">Edit Course</h2>
+        </div>
+
+        <!-- form handling -->
+        <form method="POST" id="update_course">
+            <div class="new_user">
+                <div class="form-group">
+                    <label for="title" class="text-light">Title</label>
+                    <input type="hidden" name="id" value="<%= course._id %>">
+                    <input type="text" name="title" value="<%= course.title %>">
+                </div>
+                <div class="form-group">
+                    <label for="term" class="text-light">Term</label>
+                    <input type="text" name="term" value="<%= course.term %>" placeholder="Fall 2020">
+                </div>
+                <div class="form-group">
+                    <label for="Department" class="text-light">Department</label>
+                    <select name="department" id="department">
+                        <option value="<%= course.department %>"> <%= course.department %></option>
+                        <option value="Computer Science"> Computer Science</option>
+                        <option value="Accounting"> Accounting</option>
+                        <option value="Finance"> Finance</option>
+                        <option value="Economics"> Economics</option>
+                        <option value="Mathematics "> Mathematics </option>
+                        <option value="Social Science"> Social Science</option>
+                        <option value="Marketing "> Marketing </option>
+                        <option value="Business"> Business</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn text-dark update">Save</button>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</main>
+<!-- /Main Site -->
+
+<!-- include footer -->
+<%- include('include/_footer') %>
+<!-- /include footer -->
+
+
+<script>
+    var btn1 = document.getElementById('studentsBtn');
+    var btn2 = document.getElementById('teachersBtn');
+    var btn3 = document.getElementById('coursesBtn');
+
+    btn3.style.color = "#06d6a0"
+    btn2.style.color = "#2b2d42"
+    btn1.style.color = "#2b2d42"
+    btn3.style.borderBottomStyle = "solid"
+    btn2.style.borderBottomStyle = "none"
+    btn1.style.borderBottomStyle = "none"
+    btn3.style.borderBottomWidth = "3px"
+    
+</script>
